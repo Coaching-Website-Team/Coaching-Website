@@ -1,0 +1,8 @@
+package com.upcoach.upcoachbackend.enums;
+
+public enum SuperUserAuthority {
+    view_users,
+    delete_users,
+    create_events
+    // just examples, to complete later
+}
