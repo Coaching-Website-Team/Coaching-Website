@@ -2,6 +2,7 @@ package com.upcoach.upcoachbackend.service;
 
 import com.upcoach.upcoachbackend.dto.dataDto.CoachDTO;
 import com.upcoach.upcoachbackend.exception.UserAlreadyExistsException;
+import com.upcoach.upcoachbackend.exception.UserNotFoundException;
 import com.upcoach.upcoachbackend.model.Client;
 import com.upcoach.upcoachbackend.model.User;
 import com.upcoach.upcoachbackend.repository.UserRepository;
@@ -21,5 +22,9 @@ public class UserService<T extends User> {
         user.setActive(true);
         user.setPassword(user.getPassword()); // TODO : encode password -- needs security package
         return (T) this.userRepository.save(user);
+    }
+
+    public T getUserWithEmail(String email){
+        return (T) this.userRepository.findByEmail(email).orElseThrow( () ->  new UserNotFoundException(email));
     }
 }
