@@ -11,6 +11,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
 import MenuItem from "@mui/material/MenuItem";
+import {signUpService} from "../../service/signing";
 
 
 function Copyright(props) {
@@ -41,7 +42,7 @@ export default function SignUp() {
     };
 
     const handleSubmit = (event) => {
-        alert("clicked")
+        signUpService(event,setSuccessful,isCoach);
     };
 
     const handleFileUpload = e => {
