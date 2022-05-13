@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Comfortaa:wght@300;400;500;600;700&family=Montserrat:wght@200;300;400;500;600&family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Beastly&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Contrail+One&display=swap');
+html {
+  /*background-image: url("./background.png");*/
+ 
+}
+
+.App {
+  text-align: center;
+}
+
+.img{
+  width: 250px;
+  height: 250px;
+  background : transparent;
+ /* margin-top: 20px;
+  margin-left: 10%;*/
+}
+.card{
+width: 100%;
+  max-width: 31%;
+  background:#eefef0;
+  padding: 44px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  border-radius: 4px;}
+
+  .h5 {
+    color: #ed563b;
+    margin: 26px 0 9px 0;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .h3 {
+    color: #232d39;
+    letter-spacing: 1px;
+  }
+  .p {
+    margin: 24px 0 28px 0;
+    color: #7a7a7a;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.7;
+  }
+ 
+
+
+
+
+
+
+
