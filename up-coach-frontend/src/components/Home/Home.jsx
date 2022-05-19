@@ -1,11 +1,8 @@
-import Navbar from "./components/NavbarUnauthenticated/NavbarUnauthenticated";
+import Navbar from "./NavbarUnauthenticated";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "@fontsource/space-grotesk"; // Defaults to weight 400.
-import backgroundImage from "./res/images/background_image.jpg";
-import SignUp from "./components/signup/SignUp";
-import Home from "./components/Home/Home"
-import AdminHome from "./components/Admin/AdminHome"
-import DocVerification from "./components/DocVerification/DocVerification"
+import backgroundImage from "../../res/images/background_image.jpg";
+
 const styles = {
   appBody: {
     minHeight: "100vh",
@@ -39,12 +36,14 @@ const theme = createTheme({
   },
 });
 
-function App() {
+function Home() {
   return (
-/*<Home/>*/
-/*<AdminHome/>*/
-<DocVerification/>
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <Navbar />
+        <div style={styles.appBody}></div>
+      </div>
+    </ThemeProvider>
   );
 }
-
-export default App;
+export default Home;
