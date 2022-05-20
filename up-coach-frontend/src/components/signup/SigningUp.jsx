@@ -1,15 +1,8 @@
-import Navbar from "./components/NavbarUnauthenticated/NavbarUnauthenticated";
+import Navbar from "../Home/NavbarUnauthenticated";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "@fontsource/space-grotesk"; // Defaults to weight 400.
-import backgroundImage from "./res/images/background_image.jpg";
-
-import Home from "./components/Home/Home"
-import AdminHome from "./components/Admin/AdminHome"
-import SignUp from "./components/signup/SignUp"
-import SigningUp from "./components/signup/SigningUp"
-
-import DocVerification from "./components/DocVerification/DocVerification"
-import AddOffer from "./components/Offer/AddOffer/AddOffer";
+import backgroundImage from "../../res/images/background_image.jpg";
+import SignUp from "./SignUp"
 const styles = {
   appBody: {
     minHeight: "100vh",
@@ -19,7 +12,9 @@ const styles = {
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     boxShadow: "inset 0 0 0 1000px rgba(255,255,255,.5)",
+   
   },
+
 };
 
 const theme = createTheme({
@@ -43,14 +38,14 @@ const theme = createTheme({
   },
 });
 
-function App() {
+function SigningUp() {
   return (
-/*<Home/>*/
-/*<AdminHome/>*/
-
-/*<DocVerification/>*/
-<SigningUp/>
+    <ThemeProvider theme={theme}>
+      <div className="App">
+      <Navbar />
+        <div style={styles.appBody}>   <SignUp /></div>
+      </div>
+    </ThemeProvider>
   );
 }
-
-export default App;
+export default SigningUp;
