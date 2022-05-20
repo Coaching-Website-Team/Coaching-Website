@@ -14,6 +14,45 @@ import MenuItem from "@mui/material/MenuItem";
 import {signUpService} from "../../service/signing";
 
 
+const styles = {
+    appBody: {
+      minHeight: "100vh",
+      backgroundColor: "rgba(255, 255, 255,0.5)",
+    
+      backgroundPosition: "top",
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover",
+      boxShadow: "inset 0 0 0 1000px rgba(255,255,255,.5)",
+    },
+  };
+  
+  const theme = createTheme({
+    typography: {
+      fontFamily: ["Space Grotesk"].join(","),
+      fontSize: 15,
+      button: {
+        textTransform: "none",
+      },
+    },
+    palette: {
+      primary: {
+        main: "#F58025",
+      },
+      secondary: {
+        main: "#6495ED",
+      },
+      grey: {
+        main: "#8C92AC",
+      },
+
+      success: {
+        main: "#F58025",
+     
+
+    },
+    },
+  });
+
 function Copyright(props) {
     return (<
             Typography variant="body2"
@@ -27,7 +66,6 @@ function Copyright(props) {
     );
 }
 
-const theme = createTheme();
 
 
 export default function SignUp() {
@@ -58,26 +96,28 @@ export default function SignUp() {
                 CssBaseline / >
                 <
                     Box sx={
-                    {
-                        marginTop: 12,
+                    {width:"500px",
+                        marginTop:"10%",
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
+                     
+                        
 
                     }
                 }>
                     <
                         Avatar sx={
-                        {m: 1, bgcolor: '#2e7d32'}
+                        {m: 1, bgcolor: 'secondary'}
                     }>
                         <
                             LockOutlinedIcon / >
                     <
         /Avatar> <
-                    Typography component="h1"
+                    Typography component="primary"
 
                                variant="h5"
-                               color="#2e7d32">
+                               color="success">
                     Sign up <
         /Typography> <
                     Box component="form"
@@ -99,7 +139,7 @@ export default function SignUp() {
                                 color="success"
                                 required
 
-
+                            
                                 label="Choissez votre profil"
                                 style={{width: 400}}
 
@@ -108,6 +148,7 @@ export default function SignUp() {
                                 // color = "success"
 
                                 // inputRef={register({ required: "Choose one option" })}
+                              
 
                             >
 
