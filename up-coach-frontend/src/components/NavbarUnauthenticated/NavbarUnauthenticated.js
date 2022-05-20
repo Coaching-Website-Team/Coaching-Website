@@ -80,7 +80,7 @@ const NavbarUnauthenticated = () => {
             justifyContent="center"
           >
               <img src={logo} alt="logo" />
-              <Typography sx={{mx:2}} color='primary'>
+              <Typography sx={{mx:2 , color:"#F58025"}}>
                 UpCoach
               </Typography>
           </Box>

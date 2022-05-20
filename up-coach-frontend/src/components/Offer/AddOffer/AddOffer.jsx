@@ -12,6 +12,8 @@ import Title from "../Title"
 import {Chip, Input} from "@mui/material";
 import {useEffect, useState} from "react";
 import {addOfferService} from "../../../service/offer";
+import Navbar from "../../NavbarUnauthenticated/NavbarUnauthenticated";
+import backgroundImage from "../../../res/images/background_image.jpg";
 
 function Copyright(props) {
     return (<Typography variant="body2" color="text.secondary"
@@ -22,9 +24,40 @@ function Copyright(props) {
     );
 }
 
-const theme = createTheme();
+
 
 export default function AddOffer() {
+
+    const styles = {
+        appBody: {
+          minHeight: "100vh",
+          backgroundColor: "rgba(255, 255, 255,0.5)",
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundPosition: "top",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          boxShadow: "inset 0 0 0 1000px rgba(255,255,255,.5)",
+        },
+      };
+      
+      const theme = createTheme({
+        typography: {
+          fontFamily: ["Space Grotesk"].join(","),
+          fontSize: 15,
+          button: {
+            textTransform: "none",
+          },
+        },
+        palette: {
+            success: {
+            main: "#F58025",
+          },
+         
+          grey: {
+            main: "#8C92AC",
+          },
+        },
+      });
 
     const [date, setDate] = React.useState(Date.now());
     const [values, setValues] = useState([]);
@@ -60,15 +93,17 @@ export default function AddOffer() {
         setValues(arr)
     }
     return (<ThemeProvider theme={theme}>
+            <div className="App">
+            <Navbar/>
+            <div style={styles.appBody}>
             <Container component="main"
                        maxWidth="xs">
 
                 <CssBaseline/>
 
-
+               
                 <Box sx={
                     {
-                        marginTop: 12,
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
@@ -76,7 +111,7 @@ export default function AddOffer() {
 
                     }
                 }>
-
+                    
                     <Title/> < Box component="form"
                                    noValidate onSubmit={handleSubmit}
                                    sx={
@@ -168,6 +203,8 @@ export default function AddOffer() {
                     {mt: 5}
                 }
                 /> </Container>
+                </div>
+            </div>
         </ThemeProvider>
     );
 }
