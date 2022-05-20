@@ -6,6 +6,7 @@ import SignUp from "./components/signup/SignUp";
 import Home from "./components/Home/Home"
 import AdminHome from "./components/Admin/AdminHome"
 import DocVerification from "./components/DocVerification/DocVerification"
+import AddOffer from "./components/Offer/AddOffer/AddOffer";
 const styles = {
   appBody: {
     minHeight: "100vh",
@@ -43,7 +44,8 @@ function App() {
   return (
 /*<Home/>*/
 /*<AdminHome/>*/
-<DocVerification/>
+<AddOffer/>
+/*<DocVerification/>*/
   );
 }
 
