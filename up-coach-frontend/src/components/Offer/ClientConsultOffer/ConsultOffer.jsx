@@ -8,9 +8,9 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import ProfilCard from "../../Dashboard/Coach/ProfilCard"
+import ProfilCard from "../../Dashboard/ProfilCard"
 
-import coach from "../../../css/coach.jpg"
+
 import OfferTitle from "./OfferTitle"
 import Description from "./Description"
 import {JoinOffer, Payment, ContactCoach} from "./Buttons";
