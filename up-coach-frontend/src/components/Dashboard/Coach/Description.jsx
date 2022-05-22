@@ -7,10 +7,10 @@ function Description() {
                 style={{
                     fontFamily: "Comfortaa",
                     lineHeight: "2",
-        fontSize: "20px",
-        fontWeight: "100",
-   color:"black",
-   fontStyle: "oblique",
+                    fontSize: "20px",
+                    fontWeight: "600",
+                    color: "black",
+                    fontStyle: "oblique",
                 }}
             >
                 Dont’ hesitate to add a new offer!
