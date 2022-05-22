@@ -5,24 +5,26 @@ import Title from "./Title";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
+function CoachButton() {
+  return (
+    <Button
+      sx={{
+        flexGrow: 1,
+        my: 2,
+        display: "block",
+        backgroundColor: "#F58025",
+        color: "white",
+        width: "300px",
 
-function CoachButton() { return(
-<Button
-            sx={{
-              flexGrow: 1,
-              my: 2,
-              display: "block",
-              backgroundColor: "#F58025",
-              color: "white",
-              width:"300px",
-              
-              marginLeft:"25%",
-              textAlign: "center"
-            }}
-            href="/SigningUp" 
-            center
-          >
-            Find a Coach
-          </Button>)}
+        marginLeft: "25%",
+        textAlign: "center",
+      }}
+      href="/SigningUp"
+      center
+    >
+      Find a Coach
+    </Button>
+  );
+}
 
-          export default  CoachButton;
+export default CoachButton;
