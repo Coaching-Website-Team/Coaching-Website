@@ -7,10 +7,12 @@ import Home from "./components/Home/Home"
 import AdminHome from "./components/Admin/AdminHome"
 import SignUp from "./components/signup/SignUp"
 import SigningUp from "./components/signup/SigningUp"
+import Profil from "./components/Dashboard/Client/profil"
 
 import DocVerification from "./components/DocVerification/DocVerification"
 import AddOffer from "./components/Offer/AddOffer/AddOffer";
 import ConsultOffer from "./components/Offer/CoachConsultOffer/ConsultOffer";
+// import ClientConsultOffer from "./components/Offer/ClientConsultOffer/ConsultOffer";
 const styles = {
   appBody: {
     minHeight: "100vh",
@@ -46,12 +48,16 @@ const theme = createTheme({
 
 function App() {
   return (
-/*<Home/>*/
-/*<AdminHome/>*/
-/*<AddOffer/>*/
-/*<DocVerification/>*/
-/*<ConsultOffer/>*/
-<SigningUp/>
+    <div>
+      <Navbar />
+      <Profil />
+    </div>
+    // <Home />
+    /*<AdminHome/>*/
+    /*<AddOffer/>*/
+    /*<DocVerification/>*/
+    // <ConsultOffer />
+    /* <SigningUp/> */
   );
 }
 
