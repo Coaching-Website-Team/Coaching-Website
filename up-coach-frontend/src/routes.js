@@ -4,6 +4,7 @@ import NavbarUnauthenticated from "./components/Navbar/NavbarUnauthenticated"
 import NavbarAuthenticated from "./components/Navbar/NavbarAuthenticated"
 import Home from "./components/Home/Home"
 import SignUp from "./components/signup/SignUp"
+import Details from "./components/Offer/ClientConsultOffer/Details"
 
 const MenteeRoutes = () => useRoutes([
 //     {path: "/", element: <Profil/>},
@@ -35,6 +36,7 @@ const GuestRoutes = () => useRoutes([
 //    {path: "/profil", element: <Home/>},
 //    {path: "/signin", element: <SignIn/>},
    {path: "/signup", element: <SignUp/>},
+   {path:"/offer/:id", element: <Details/>},
 //    {path: "/forgotPassword", element: <Forgot/>},
 //    {path: "/EmailSent", element: <EmailSent/>},
 //    {path: "/NewPassword/:userId", element: <NewPassword/>},
