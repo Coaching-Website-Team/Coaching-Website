@@ -13,7 +13,6 @@ function Img() {
                         position: "absolute",
                         width: "250px",
                         height: "300px",
-
                         background: "transparent",
                         marginTop: "100px",
                         clipPath: "circle()",
