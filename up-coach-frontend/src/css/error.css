@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+.container h2 {
+    font-family: 'Inconsolata';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: -0.08em;
+    text-transform: uppercase;
+    color: #333;
+    margin-left: 2.5rem;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.main img {
+    max-width: 600px;
+    margin-top: 2.5rem;
+    margin-left: 2rem;
+}
+
+.aside {
+    padding: 0 2.5rem;
+    margin: 0 1.2rem;
+}
+
+.aside h1 {
+    font-family: 'Space Mono';
+    font-weight: bold;
+    font-style: normal;
+    font-size: 60px;
+}
+
+.aside p {
+    font-family: 'Space Mono';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 36px;
+    color: #4F4F4F;
+    /* padding-right: 10rem; */
+}
+
+.aside button {
+    font-family: Space Mono;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    background: #333333;
+    color: #fff;
+    padding: 1rem;
+    margin-top: 16px;
+    border: none;
+}
+
+.footer {
+    text-align: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+@media (max-width: 780px) {
+    .container h2 {
+        margin-left: 1rem;
+    }
+
+    .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .main img {
+        width: 280px;
+        height: 230px;
+        margin-top: 1.5rem;
+        margin-left: 11%;
+        margin-right: 11%;
+    }
+
+    .aside {
+        padding: 0;
+        margin: 0 14px;
+    }
+
+    .aside h1 {
+        font-size: 42px;
+    }
+
+    .aside p {
+        font-size: 18px;
+    }
+
+    .aside button {
+        font-size: 12px;
+        padding: 0.7rem;
+        margin-top: 2px;
+        margin-bottom: 5rem;
+    }
+}
