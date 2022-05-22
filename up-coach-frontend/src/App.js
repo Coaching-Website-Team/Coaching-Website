@@ -11,7 +11,7 @@ import SigningUp from "./components/signup/SigningUp"
 import DocVerification from "./components/DocVerification/DocVerification"
 import AddOffer from "./components/Offer/AddOffer/AddOffer";
 import ConsultOffer from "./components/Offer/CoachConsultOffer/ConsultOffer";
-
+import Profil from "./components/Dashboard/Client/profil"
 
 import SigningIn from "./components/signIn/SigningIn"
 import {useEffect, useState} from "react";
@@ -25,8 +25,9 @@ function App() {
    {path:"/signin", element: <SigningIn/>},
    {path:"/verfiyDocuments", element: <DocVerification/>},
    {path:"/ConsultOffer", element: <ConsultOffer/>},
-  
-   {path:"/SigningUp", element: <SigningUp/>}
+
+   {path:"/SigningUp", element: <SigningUp/>},
+   {path:"/Profil", element: <Profil/>}
 
 ]);
   return (
