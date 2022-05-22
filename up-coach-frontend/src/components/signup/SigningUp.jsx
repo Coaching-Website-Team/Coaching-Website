@@ -1,4 +1,4 @@
-import Navbar from "../Home/NavbarUnauthenticated";
+import Navbar from "../NavbarUnauthenticated/NavbarAuthenticated";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "@fontsource/space-grotesk"; // Defaults to weight 400.
 import backgroundImage from "../../res/images/background_image.jpg";
@@ -42,7 +42,6 @@ function SigningUp() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-      <Navbar />
         <div style={styles.appBody}>   <SignUp /></div>
       </div>
     </ThemeProvider>

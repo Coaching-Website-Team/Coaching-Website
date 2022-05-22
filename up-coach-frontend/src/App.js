@@ -1,4 +1,4 @@
-import Navbar from "./components/NavbarUnauthenticated/NavbarUnauthenticated";
+import Navbar from "./components/NavbarUnauthenticated/NavbarAuthenticated";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "@fontsource/space-grotesk"; // Defaults to weight 400.
 import backgroundImage from "./res/images/background_image.jpg";
@@ -51,7 +51,11 @@ function App() {
 /*<AddOffer/>*/
 /*<DocVerification/>*/
 /*<ConsultOffer/>*/
-<SigningUp/>
+<ThemeProvider theme={theme}>
+  <Navbar />
+  <SigningUp/>  
+</ThemeProvider>
+
   );
 }
 
