@@ -64,7 +64,6 @@ const useStyles = makeStyles({
   marginAll: {
     marginLeft: "5%",
     marginTop: "4%",
-
   }
 });
 function Body(props) {
@@ -102,7 +101,6 @@ function Body(props) {
           </li>
         </ol>
       </div>
-
     </div>
   );
 }
