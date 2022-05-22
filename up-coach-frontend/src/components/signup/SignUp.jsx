@@ -108,7 +108,7 @@ export default function SignUp() {
                 }>
                     <
                         Avatar sx={
-                        {m: 1, bgcolor: 'secondary'}
+                        {m: 1, bgcolor: '#000000'}
                     }>
                         <
                             LockOutlinedIcon / >
