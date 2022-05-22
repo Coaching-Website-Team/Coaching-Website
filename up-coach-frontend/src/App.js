@@ -48,9 +48,10 @@ function App() {
 /*<AdminHome/>*/
 /*<DocVerification/>*/
 /*<AdminHome/>*/
-<SigningUp/>
-/*
-<DocVerification/>*/
+/*<SigningUp/>*/
+/*<DocVerification/>*/
+
+<DocVerification/>
   );
 }
 
