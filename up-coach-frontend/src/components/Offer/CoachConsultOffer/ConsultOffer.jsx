@@ -4,7 +4,7 @@ import MyOffers from "./MyOffers"
 import "../../../css/App.css"
 import Welcome from  "./welcome"
 import AlLCards from "./OffersCard/AlLCards"
-import Navbar from "../../NavbarUnauthenticated/NavbarUnauthenticated";
+import Navbar from "../../Navbar/NavbarUnauthenticated";
 import {createTheme} from '@mui/material/styles';
 import backgroundImage from "../../../res/images/background_image.jpg";
 

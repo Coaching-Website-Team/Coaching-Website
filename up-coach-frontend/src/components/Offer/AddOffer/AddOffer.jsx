@@ -12,7 +12,7 @@ import Title from "../Title"
 import {Chip, Input} from "@mui/material";
 import {useEffect, useState} from "react";
 import {addOfferService} from "../../../service/offer";
-import Navbar from "../../NavbarUnauthenticated/NavbarUnauthenticated";
+import Navbar from "../../Navbar/NavbarUnauthenticated";
 import backgroundImage from "../../../res/images/background_image.jpg";
 
 function Copyright(props) {
