@@ -1,8 +1,7 @@
 import React, {useEffect, useState} from "react";
 
 import ConsultOffer from "./ConsultOffer";
-import coach from  "../../../css/coach.jpg"
-import {getAllOffers, getOffer} from "../../../service/offer";
+import {getOffer} from "../../../service/offer";
 
 function Details(props) {
     let [offer, setOffer] = useState({data : ""});

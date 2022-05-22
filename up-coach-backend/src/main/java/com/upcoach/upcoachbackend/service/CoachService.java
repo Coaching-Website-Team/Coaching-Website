@@ -24,6 +24,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional
@@ -82,7 +83,7 @@ public class CoachService extends UserService<Coach>{
                             c.getFirstName() + " " + c.getLastName()
                     );
                 }
-        ).toList();
+        ).collect(Collectors.toList());
     }
 
     public Coach createCoach(CoachDTO coachDto) throws IOException, NoSuchAlgorithmException {
@@ -129,6 +130,6 @@ public class CoachService extends UserService<Coach>{
                         coach.getCoachingCertificate(),
                         coach.getIdentityDocument(),
                         coach.getImage())
-        ).toList();
+        ).collect(Collectors.toList());
     }
 }

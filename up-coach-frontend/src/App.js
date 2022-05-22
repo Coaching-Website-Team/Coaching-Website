@@ -11,6 +11,8 @@ import SigningUp from "./components/signup/SigningUp"
 import DocVerification from "./components/DocVerification/DocVerification"
 import AddOffer from "./components/Offer/AddOffer/AddOffer";
 import ConsultOffer from "./components/Offer/CoachConsultOffer/ConsultOffer";
+
+
 import SigningIn from "./components/signIn/SigningIn"
 import {useEffect, useState} from "react";
 import {BrowserRouter as Router, Route, Routes, useRoutes} from "react-router-dom";
@@ -28,6 +30,8 @@ function App() {
 
 ]);
   return (
+
+
     <div className="App">
       
       <Router>
@@ -36,6 +40,7 @@ function App() {
 </ Router>
 
     </div>
+
 
   );
 }

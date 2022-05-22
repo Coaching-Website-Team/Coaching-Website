@@ -119,7 +119,7 @@ public class OfferService {
         if (coach.getId()!=0){ // equivalent to id != null i guess
             Optional<List<Offer>> offers = offerRepository.findAllByCoachId(coach.getId());
             if (offers.isPresent()){
-                return offers.get().stream().map(OfferDTO::new).toList();
+                return offers.get().stream().map(OfferDTO::new).collect(Collectors.toList());
             }
             return List.of();
         }
@@ -127,7 +127,7 @@ public class OfferService {
         if (coach.getFirstName() != null && coach.getLastName()!=null){
             Optional<List<Offer>> offers =  offerRepository.findAllOffersByCoachFirstNameAndCoachLastName(coach.getFirstName(), coach.getLastName());
             if (offers.isPresent()){
-                return offers.get().stream().map(OfferDTO::new).toList();
+                return offers.get().stream().map(OfferDTO::new).collect(Collectors.toList());
             }
             return List.of();
         }
@@ -172,7 +172,7 @@ public class OfferService {
 
         List<Offer> res = fullTextEntityManager.createFullTextQuery(query, Offer.class).getResultList();
 
-        return res.stream().map(OfferDTO::new).toList();
+        return res.stream().map(OfferDTO::new).collect(Collectors.toList());
     }
 
     public void deleteOffer(long id) {
@@ -195,6 +195,6 @@ public class OfferService {
 
     public List<OfferDTO> getAllOffers() {
         List<Offer> offers =  offerRepository.findAll();
-        return offers.stream().map(OfferDTO::new).toList();
+        return offers.stream().map(OfferDTO::new).collect(Collectors.toList());
     }
 }
