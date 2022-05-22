@@ -11,6 +11,7 @@ import SigningUp from "./components/signup/SigningUp"
 import DocVerification from "./components/DocVerification/DocVerification"
 import AddOffer from "./components/Offer/AddOffer/AddOffer";
 import ConsultOffer from "./components/Offer/CoachConsultOffer/ConsultOffer";
+import Details from "./components/Offer/ClientConsultOffer/Details";
 const styles = {
   appBody: {
     minHeight: "100vh",
@@ -51,7 +52,8 @@ function App() {
 /*<AddOffer/>*/
 /*<DocVerification/>*/
 /*<ConsultOffer/>*/
-<SigningUp/>
+/*<SigningUp/>*/
+<Details/>
   );
 }
 
