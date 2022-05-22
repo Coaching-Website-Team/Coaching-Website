@@ -1,7 +1,6 @@
 import React from "react";
-import MyButton from "../../../shared/MyButton";
 import { makeStyles } from "@mui/styles";
-import ButtonLogin from "../../../shared/ButtonLogin"
+import ButtonLogin from "../../shared/ButtonLogin"
 const useStyles = makeStyles({
     root: {
         float: "left",

@@ -1,5 +1,5 @@
 import React from "react";
-import {Hidden} from "@mui/material";
+import { Hidden } from "@mui/material";
 import man_training from "../../../css/tarinning_wom.png";
 import quote_image from "../../../css/quote.jpg";
 function Img() {
@@ -13,7 +13,6 @@ function Img() {
                         position: "absolute",
                         width: "250px",
                         height: "300px",
-                      
                         background: "transparent",
                         marginTop: "100px",
                         clipPath: "circle()",
@@ -41,4 +40,4 @@ function QuoteImage() {
     </>;
 }
 export default Img;
-export {QuoteImage};
+export { QuoteImage };

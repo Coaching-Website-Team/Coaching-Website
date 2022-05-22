@@ -1,6 +1,6 @@
 import React from "react";
-import MyButton from "../../../shared/MyButton";
-import ButtonLogin from "../../../shared/ButtonLogin";
+import MyButton from "../../shared/MyButton";
+import ButtonLogin from "../../shared/ButtonLogin";
 import { makeStyles } from "@mui/styles";
 const useStyles = makeStyles({
     root: {
@@ -24,24 +24,24 @@ const useStyles = makeStyles({
     },
 });
 
-function TrainingSessions(){
+function TrainingSessions() {
     let style = useStyles();
     return (
         <ButtonLogin
-           
+
             name="My Training Sessions"
             href="/training_sessions"
         />
     );
 }
-function MealPlans(){
+function MealPlans() {
     let style = useStyles();
     return (
         <ButtonLogin
-        
-        name="My Meal Plans"
-        href="/meal_plans"
+
+            name="My Meal Plans"
+            href="/meal_plans"
         />
     );
 }
-export {TrainingSessions, MealPlans};
+export { TrainingSessions, MealPlans };
