@@ -34,7 +34,7 @@ const NavbarUnauthenticated = () => {
 
 
   return (
-    <AppBar position="static" color="common" variant="white">
+    <AppBar position="absolute" color="common" variant="white">
       <Container maxWidth="xl">
         <Toolbar disableGutters style={styles.customizeToolbar}>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
