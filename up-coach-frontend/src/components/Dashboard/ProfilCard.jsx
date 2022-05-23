@@ -4,6 +4,8 @@ import styled from "styled-components";
   const Container = styled.div`
  width: 100%;
   width: 500px;
+    
+  background:rgba(213, 223, 230, 0.8);
   
   padding: 44px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
@@ -23,7 +25,7 @@ const Img = styled.img`
 `;
 
 const Test1 = styled.h5`
-color: #ed563b;
+
 margin: 26px 0 9px 0;
 font-weight: 500;
 font-size: 14px
@@ -31,7 +33,7 @@ font-size: 14px
 `;
 
 const Test2 = styled.h3`
-color: rgba(15, 103, 8, 1);
+
 letter-spacing: 1px;
 fontFamily: "Rubik Beastly";
   }
@@ -39,7 +41,7 @@ fontFamily: "Rubik Beastly";
 
 const Test3 = styled.p`
 margin: 24px 0 28px 0;
-    color: #7a7a7a;
+   
     font-size: 15px;
     font-weight: 400;
     line-height: 1.7;

@@ -6,6 +6,7 @@ import Home from "./components/Home/Home"
 import SignUp from "./components/signup/SignUp"
 import SignIn from "./components/signIn/SignIn"
 import Details from "./components/Offer/ClientConsultOffer/Details"
+
 import AdminHome from "./components/Admin/AdminHome"
 import Profil from "./components/Dashboard/Client/profil"
 import DocVerification from "./components/DocVerification/DocVerification"
@@ -27,6 +28,7 @@ const MentorRoutes = () => useRoutes([
     {path: "/", element: <ProfilDash/>},
 
 
+
 //    {path: "/", element: <CoachProfil/>},
 //    {path: "/profil", element: <CoachProfil/>},
  {path:"/add_offer",element:<AddOffer/>},
@@ -37,6 +39,7 @@ const MentorRoutes = () => useRoutes([
 ]);
 const AdminRoutes = () => useRoutes([
 
+
     {path: "/signin", element: <SignIn/>},
     {path: "/", element: <AdminHome/>},
     {path: "/verfiyDocuments", element: <DocVerification/>},
@@ -45,6 +48,7 @@ const AdminRoutes = () => useRoutes([
 //    {path: "/changePassword", element: <ChangePassword/>},
 //    {path: "/admin/coaches_documents", element: <CoachList/>},
 //    {path: "/NewPassword/:userId", element: <NewPassword/>}
+
 ]);
 const GuestRoutes = () => useRoutes([
     {path: "/signin", element: <SignIn/>},

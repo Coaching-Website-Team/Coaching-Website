@@ -7,7 +7,7 @@ function TrainerCard(props) {
  width: 100%;
   max-width: 80%;
   
-  background:#D5DFE6;
+  background:rgba(213, 223, 230, 0.49);
   padding: 44px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   text-align: left;
@@ -37,7 +37,7 @@ font-size: 14px
 `;
 
   const Test2 = styled.h3`
-color: #F58025;
+
 letter-spacing: 1px;
 fontFamily: "Rubik Beastly";
   }

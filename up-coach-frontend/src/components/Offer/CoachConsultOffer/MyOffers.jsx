@@ -3,7 +3,7 @@ import React from "react";
 import "../../../css/App.css"
 function Welcome(props) {
   return ( <div>
-      <p style={{fontFamily:"Space Grotesk",
+      <p style={{fontFamily:"Space Grotesk", margin: "20%",
      
     
   lineHeight: "1,4",

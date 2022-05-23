@@ -24,7 +24,7 @@ const pages = [
   { name: 'Home', path: "/" },
   { name: 'Offers', path: "/offers" },
   { name: 'Settings', path: "/settings" },
-  { name: 'Profile', path: "/profile" }
+  { name: 'Profile', path: "/" }
 ]
 
 const settings = ['Profile', 'Logout'];

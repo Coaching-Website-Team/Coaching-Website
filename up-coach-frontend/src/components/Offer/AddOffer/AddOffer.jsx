@@ -12,7 +12,6 @@ import Title from "../Title"
 import {Chip, Input} from "@mui/material";
 import {useEffect, useState} from "react";
 import {addOfferService} from "../../../service/offer";
-import Navbar from "../../Navbar/NavbarUnauthenticated";
 import backgroundImage from "../../../res/images/background_image.jpg";
 
 function Copyright(props) {
@@ -36,7 +35,7 @@ export default function AddOffer() {
           backgroundPosition: "top",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
-          boxShadow: "inset 0 0 0 1000px rgba(255,255,255,.5)",
+          boxShadow: "inset 0 0 0 1000px rgba(255,255,255,.5)"
         },
       };
       
@@ -94,7 +93,6 @@ export default function AddOffer() {
     }
     return (<ThemeProvider theme={theme}>
             <div className="App">
-            <Navbar/>
             <div style={styles.appBody}>
             <Container component="main"
                        maxWidth="xs">
