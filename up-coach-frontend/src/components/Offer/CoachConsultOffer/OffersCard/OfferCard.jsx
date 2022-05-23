@@ -6,7 +6,7 @@ import {deleteOfferById} from "../../../../service/offer";
 
 function OfferCard(props) {
     const Container = styled.div`
- width: 1500px;
+ width: 900px;
   max-width: 80%;
   background:#FFFFFF;
   padding: 44px;

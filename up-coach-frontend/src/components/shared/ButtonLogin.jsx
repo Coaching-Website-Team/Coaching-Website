@@ -6,8 +6,8 @@ import "../../css/App.css"
 
 let useStyle = makeStyles({
   root: {
-    backgroundColor: "#3FA437",
-    color: "black",
+    backgroundColor: "#F58025",
+    color: "white",
     borderRadius: 100,
     borderColor: "#316300",
     border: "2px double #cccccc",

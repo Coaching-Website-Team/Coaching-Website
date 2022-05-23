@@ -8,6 +8,7 @@ const useStyles = makeStyles({
         position: "absolute",
         marginLeft: "12%",
         fontFamily: "Cascadia Code",
+        color: "white"
     },
     secondary: {
         float: "left",
@@ -28,9 +29,7 @@ function AddOffer() {
     let style = useStyles();
     return (
         <ButtonLogin
-            style={{
-
-            }}
+            
             name="Add Offer"
             href="/add_offer"
         />
