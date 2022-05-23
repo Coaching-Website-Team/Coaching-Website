@@ -259,7 +259,7 @@ export default function SignUp() {
                 </Button>{" "}
                 <Grid container justifyContent="flex-end">
                   <Grid item>
-                    <Link href="#" color="#2e7d32" variant="body2">
+                    <Link href="/signin" color="#2e7d32" variant="body2">
                       Already have an account ? Sign in
                     </Link>{" "}
                   </Grid>{" "}

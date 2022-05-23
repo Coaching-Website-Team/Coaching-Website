@@ -26,7 +26,7 @@ public class UserService<T extends User> {
     public T createUser(T user){
         if (userRepository.existsByEmail(user.getEmail())) throw new UserAlreadyExistsException(user.getEmail());
         user.setActive(true);
-        user.setPassword(user.getPassword()); // TODO : encode password -- needs security package
+        user.setPassword(passwordEncoder.encode(user.getPassword())); // TODO : encode password -- needs security package
         return (T) this.userRepository.save(user);
     }
 

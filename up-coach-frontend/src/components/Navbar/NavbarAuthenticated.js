@@ -14,16 +14,17 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 
 import MenuIcon from '@mui/icons-material/Menu';
-import {goto} from "../../service/utils";
+import { goto } from "../../service/utils";
 import logo from '../../res/images/up_coach_logo.svg';
 import {logOut} from  "../../service/authentication";
 
 
+
 const pages = [
-  {name :'Home',path :"/"},
-  {name :'Offers',path :"/offers"},
-  {name :'Settings',path :"/settings"},
-  {name :'Profile',path :"/profile"}
+  { name: 'Home', path: "/" },
+  { name: 'Offers', path: "/offers" },
+  { name: 'Settings', path: "/settings" },
+  { name: 'Profile', path: "/profile" }
 ]
 
 const settings = ['Profile', 'Logout'];
@@ -34,12 +35,12 @@ const NavbarAuthenticated = () => {
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
 
-  const [open,setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(false);
 
   const handleOpenNavMenu = () => {
     setOpen(true)
   };
-  
+
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
   };
@@ -54,17 +55,20 @@ const NavbarAuthenticated = () => {
 
   const handleClickUserMenu = (event) => {
     console.log(event.target)
-    switch(event.target.innerHTML){
-      case "Logout" :
+    switch (event.target.innerHTML) {
+      case "Logout":
         console.log("logging out...");
         logOut();
-        break; 
-      default : 
+
+        // logOut();
+        break;
+      default:
+
         break;
     }
   }
-  const handleClickNavItem = (page)=>{
-    console.log(page  )
+  const handleClickNavItem = (page) => {
+    console.log(page)
     goto(page.path)
   }
 
@@ -72,13 +76,13 @@ const NavbarAuthenticated = () => {
     <AppBar position="absolute" className="nav-bar" color="common" variant="white">
       <Container maxWidth="xl" >
         <Toolbar disableGutters>
-        <img src={logo} alt="logo" />
+          <img src={logo} alt="logo" />
           <Typography
             color="primary"
             variant="h6"
             noWrap
             component="div"
-            sx={{ mr: 30 , ml:2, display: { xs: 'none', md: 'flex' } }}
+            sx={{ mr: 30, ml: 2, display: { xs: 'none', md: 'flex' } }}
             fontWeight="550"
           >
             UpCoach
@@ -114,7 +118,7 @@ const NavbarAuthenticated = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page.name} onClick={()=>handleClickNavItem(page)}>
+                <MenuItem key={page.name} onClick={() => handleClickNavItem(page)}>
                   <Typography textAlign="center">{page.name}</Typography>
                 </MenuItem>
               ))}
@@ -124,7 +128,7 @@ const NavbarAuthenticated = () => {
             variant="h6"
             noWrap
             component="div"
-            sx={{ flexGrow : 1, display: { xs: 'flex', md: 'none' } }}
+            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
             fontWeight="550"
           >
             UpCoach
@@ -133,8 +137,8 @@ const NavbarAuthenticated = () => {
             {pages.map((page) => (
               <Button
                 key={page.name}
-                onClick={()=>handleClickNavItem(page)}
-                sx={{ my: 2,mx:1,px:3, color: 'black', display: 'block' }}
+                onClick={() => handleClickNavItem(page)}
+                sx={{ my: 2, mx: 1, px: 3, color: 'black', display: 'block' }}
               >
                 {page.name}
               </Button>
