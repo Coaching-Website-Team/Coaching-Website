@@ -1,4 +1,4 @@
-package com.upcoach.upcoachbackend.controller;
+package com.upcoach.upcoachbackend.controller.controller;
 
 import com.upcoach.upcoachbackend.dto.dataDto.OfferDTO;
 import com.upcoach.upcoachbackend.dto.dataDto.OfferRequestDTO;

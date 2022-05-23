@@ -1,4 +1,4 @@
-package com.upcoach.upcoachbackend.controller;
+package com.upcoach.upcoachbackend.controller.controller;
 
 import com.upcoach.upcoachbackend.dto.dataDto.CoachDTO;
 import com.upcoach.upcoachbackend.enums.Role;
@@ -14,7 +14,6 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.PostConstruct;
 import javax.validation.Valid;
 
 @RestController

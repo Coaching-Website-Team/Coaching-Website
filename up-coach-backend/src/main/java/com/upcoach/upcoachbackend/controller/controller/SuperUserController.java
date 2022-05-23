@@ -1,4 +1,4 @@
-package com.upcoach.upcoachbackend.controller;
+package com.upcoach.upcoachbackend.controller.controller;
 import com.upcoach.upcoachbackend.dto.dataDto.CoachNotVDTO;
 import com.upcoach.upcoachbackend.model.SuperUser;
 import com.upcoach.upcoachbackend.service.CoachService;
