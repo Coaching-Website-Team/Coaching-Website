@@ -4,12 +4,13 @@ import "../../../css/App.css"
 function Welcome(props) {
   return ( <div>
       <p style={{fontFamily:"Space Grotesk",
-     
-    
-  lineHeight: "1,4",
+   
+     lineHeight: "1,4",
+ 
     fontSize: "30px",
-
+    marginBottom:"10%",
  fontWeight: "300",
+
 
 
 }}> <span style={{color:"#F58025"}}>Welcome coach ! You client are waiting for you</span>

@@ -17,7 +17,7 @@ function ClientButton() { return(
               width:"300px",
               marginLeft:"25%",
               textAlign: "center"}}
-            href="/SigningUp" 
+            href="/signup" 
             center>
             Start your first coaching offer
           </Button>)}

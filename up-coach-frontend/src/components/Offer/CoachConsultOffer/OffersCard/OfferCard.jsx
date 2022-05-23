@@ -6,9 +6,10 @@ import {deleteOfferById} from "../../../../service/offer";
 
 function OfferCard(props) {
     const Container = styled.div`
- width: 1500px;
+ width: 100%;
   max-width: 80%;
-  background:#FFFFFF;
+  background:rgba(213, 223, 230, 0.49);
+
   padding: 44px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -42,7 +43,7 @@ color: rgba(15, 103, 8, 1);
 letter-spacing: 1px;
 fontFamily: "Rubik Beastly";
 font-size: 40px;
-margin-left: 20%;
+
 
   }
 `;
@@ -53,6 +54,12 @@ margin: 0 0 0 0;
     font-size: 20px;
     font-weight: 400;
     line-height: 1.7;
+      
+overflow: hidden;
+
+display: -webkit-box;
+-webkit-line-clamp: 5;
+-webkit-box-orient: vertical;
   
 
     

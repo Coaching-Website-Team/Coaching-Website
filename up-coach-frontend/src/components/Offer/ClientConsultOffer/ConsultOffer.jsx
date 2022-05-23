@@ -37,7 +37,7 @@ export default function ConsultOffer(props) {
     <Grid  container xs={12}>
     <Grid item xs={2}></Grid>
     <Grid item xs={6}>
-      <p style={{fontFamily:"Rubik Beastly",
+      <p style={{fontFamily:"Space Grotesk",
        
       
        lineHeight: "1,4",
@@ -58,7 +58,7 @@ export default function ConsultOffer(props) {
 <Grid item  container xs={12}>
 <Grid item xs={4}></Grid>
 <Grid item xs={4}>
-      <p style={{fontFamily:"Rubik Beastly",
+      <p style={{fontFamily:"Space Grotesk",
        
       
        lineHeight: "1,4",
@@ -95,7 +95,7 @@ export default function ConsultOffer(props) {
  <Grid item xs={2}></Grid>
      <Grid item xs={6}>
          
- <p style={{fontFamily:"Rubik Beastly",
+ <p style={{fontFamily:"Space Grotesk",
        
       
        lineHeight: "1,4",
@@ -120,7 +120,7 @@ export default function ConsultOffer(props) {
  <Grid item xs={2}></Grid>
  <Grid item xs={8}>
          
- <p style={{fontFamily:"Rubik Beastly",
+ <p style={{fontFamily:"Space Grotesk",
        
       
        lineHeight: "1,4",

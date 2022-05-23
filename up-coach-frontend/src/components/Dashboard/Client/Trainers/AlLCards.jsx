@@ -2,9 +2,30 @@ import React, { useState, useEffect } from "react";
 import photo from "./coach.jpg";
 import styled from "styled-components";
 import Grid from "@mui/material/Grid";
+import {createTheme, ThemeProvider} from '@mui/material/styles';
 
 import TrainerCard from "./TrainerCard"
 import {getAllOffers, getMyOffers} from "../../../../service/offer";
+
+const theme = createTheme({
+    overrides: {
+      MuiCssBaseline: {
+        "@global": {
+          "*::-webkit-scrollbar": {
+            height: "100px",
+            width: "10px"
+          },
+          "*::-webkit-scrollbar-track": {
+            background: "#E4EFEF"
+          },
+          "*::-webkit-scrollbar-thumb": {
+            background: "#1D388F61",
+            borderRadius: "2px"
+          }
+        }
+      }
+    }
+  });
  function AlLCards(props){
 /*data from back normallly*/
      let [courses, setCourses] = useState({data : ""});
@@ -15,7 +36,9 @@ import {getAllOffers, getMyOffers} from "../../../../service/offer";
          };
      },[courses.data]);
 
-     return( <Grid    container
+     return( 
+        <ThemeProvider theme={theme}>
+     <Grid    container
         direction="row"
         justifyContent="center"
         alignItems="center" spacing={4}>
@@ -25,7 +48,7 @@ import {getAllOffers, getMyOffers} from "../../../../service/offer";
              <h1>loading</h1> </> : <>
          {
 courses.data.map((card) => (
-    <Grid item xs={3}>
+    <Grid item container xs={4}>
         <TrainerCard
             url = {"/offer/"+card.id}
             id={card.id}
@@ -45,7 +68,8 @@ courses.data.map((card) => (
 
         </Grid>
 
-        </Grid>)
+        </Grid> 
+        </ThemeProvider>)
 
 
 

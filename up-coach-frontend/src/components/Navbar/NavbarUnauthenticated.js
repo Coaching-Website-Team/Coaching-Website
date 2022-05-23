@@ -107,7 +107,7 @@ const NavbarUnauthenticated = () => {
               </Typography>
           </Box>
 
-          <Button sx={{ flexGrow: 1, my: 2, color: "black", display: "block" }}>
+          <Button sx={{ flexGrow: 1, my: 2, color: "black", display: "block" }}  href="/signIn">
             Log in
           </Button>
           <Button
@@ -118,6 +118,7 @@ const NavbarUnauthenticated = () => {
               backgroundColor: "#F58025",
               color: "white",
             }}
+            href="/signup"
           >
             Try now for free
           </Button>

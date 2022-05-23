@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
 import ButtonLogin from "../../shared/ButtonLogin"
+import NewButton from "../../shared/NewButton"
 const useStyles = makeStyles({
     root: {
         float: "left",
@@ -26,11 +27,11 @@ const useStyles = makeStyles({
 function ContactCoach(props){
     let style = useStyles();
     return (
-        <ButtonLogin
+        <NewButton
             style={{
              
             }}
-        name="Contact Coach"
+        text="Contact Coach"
      
         onClick={() => window.open("mailto:"+props.email)}
         />

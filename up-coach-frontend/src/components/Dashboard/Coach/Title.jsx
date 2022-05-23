@@ -29,28 +29,25 @@ const useStyles = makeStyles({
 function Title(props) {
   let style = useStyles();
   return (
-    
-    <Grid  container >
- <Grid item  md={4} xs={4}></Grid>
-      <Grid item  container md={1} xs={1} >  
-        <img src={iversefeuille} alt="feuille" className={style.inversefeuille} />
-      </Grid>
 
-      <Grid item  container md={3} xs={3}   justifyContent="space-between" 
- >   <p style={{
-        fontFamily: "Rubik Beastly",
+    <Grid container >
+      <Grid item md={4} xs={4}></Grid>
+     
+
+      <Grid item container md={3} xs={3} justifyContent="space-between"
+      >   <p style={{
+        // fontFamily: "",
         lineHeight: "1,4",
         fontSize: "40px",
-        fontWeight: "100",
+        fontWeight: "1000",
         marginTop: "10%",
-        color:"rgba(15, 103, 8, 1)"
+        marginLeft: "20%",
+        color: "#F58025"
 
       }}> {props.title} </p>
       </Grid>
-      <Grid item md={1} xs={1} > 
-      <img src={feuille} alt="feuille" height="30px" className={style.feuille} /></Grid>
-      <Grid item  md={3} xs={3}></Grid>
-    
+      
+
     </Grid>
   );
 }
