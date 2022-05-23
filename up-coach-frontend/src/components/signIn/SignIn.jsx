@@ -16,6 +16,7 @@ import axios from "axios";
 import {useState} from "react";
 import {goto} from "../../service/utils";
 
+
 function getRole(key) {
     return key.substring(1, key.length - 1);
 }
@@ -125,7 +126,7 @@ export default function SignIn() {
                 <
                     Box sx={
                     {
-                        marginTop: 10,
+                        marginTop: 5,
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',

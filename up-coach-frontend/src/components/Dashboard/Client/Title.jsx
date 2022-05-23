@@ -35,14 +35,7 @@ function Title(props) {
   let style = useStyles();
   return (
     <div>
-
-      <Grid container>
-        <Grid item container md={3} xs={3}></Grid>
-        <Grid item container md={1} xs={1} >
-          <img src={iversefeuille} alt="feuille" className={style.inversefeuille} />
-        </Grid>
-
-        <Grid item container md={2} xs={2} >   <p style={{
+ <p style={{
           fontFamily: "Rubik Beastly",
           marginLeft: "20",
           lineHeight: "1,4",
@@ -52,12 +45,7 @@ function Title(props) {
           color: "rgba(15, 103, 8, 1)"
 
         }}>{props.title}</p>
-        </Grid>
-        <Grid item md={2} xs={2} > <img src={feuille} alt="feuille" height="30px" className={style.feuille} /></Grid>
-        <Grid item container md={3} xs={3}></Grid>
-      </Grid>
-      <Grid container>
-        <Grid item xs={6}>
+       
           <p
             style={{
 
@@ -68,9 +56,7 @@ function Title(props) {
               fontWeight: "100",
               marginLeft: "40%"
             }}>because you health is our priority we afford for you multiple coaching offer</p>
-        </Grid>
-
-        <Grid item xs={12}>
+       
           <p
             style={{
 
@@ -80,9 +66,9 @@ function Title(props) {
               fontSize: "20px",
               fontWeight: "100",
               marginLeft: "5%"
-            }}>  don’t miss the chance ! choose the coach and start you sport session from home!</p>
-        </Grid>
-      </Grid>
+            }}>
+                don’t miss the chance ! choose the coach and start you sport session from home!</p>
+      
     </div>
 
   );

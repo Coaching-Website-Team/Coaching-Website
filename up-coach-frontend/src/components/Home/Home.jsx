@@ -1,4 +1,3 @@
-import Navbar from "./NavbarUnauthenticated";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "@fontsource/space-grotesk"; // Defaults to weight 400.
 import backgroundImage from "../../res/images/background_image.jpg";
@@ -43,18 +42,16 @@ const theme = createTheme({
 function Home() {
   return (
     <ThemeProvider theme={theme}>
-      <div className="App">
-        <Navbar />
+      
        
         <div style={styles.appBody}> 
          <Title/>
          <Grid item xs={2}> </Grid>
          <Grid container > <Grid item xs={4}> <CoachButton/></Grid>
-         <Grid item xs={4}><ClientButton/></Grid>
+         <Grid item xs={6}><ClientButton/></Grid>
          </Grid>
        
 
-        </div>
       </div>
     </ThemeProvider>
   );

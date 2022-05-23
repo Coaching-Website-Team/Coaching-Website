@@ -15,15 +15,12 @@ const useStyles = makeStyles({
     flexGrow: 1,
     position: "relative",
 
-    backgroundColor: "transparent",
     opacity: 1
   },
   paper: {
     padding: 0,
     textAlign: "left",
-    color: "theme.palette.text.secondary",
-    backgroundColor: "transparent",
-    boxShadow: "0 0 0 0 transparent",
+    
     position: "absolute",
     alignItems: "center",
 
@@ -31,18 +28,17 @@ const useStyles = makeStyles({
   list: {
 
     listStyle: "none",
-    backgroundColor: "transparent",
+
   },
   li: {
     marginTop: "50px",
     // position:"absolute",
 
-    backgroundColor: "transparent",
+   
   },
   liButton: {
     marginTop: "100px",
 
-    backgroundColor: "transparent",
   },
   lii: {
     marginTop: "40%",
@@ -52,14 +48,13 @@ const useStyles = makeStyles({
       fontFamily: "Montserrat",
       fontWeight: 400,
 
-      backgroundColor: "transparent",
     },
   },
   course: {
     marginTop: "4%",
     marginLeft: "5%",
 
-    backgroundColor: "transparent",
+    
   },
   marginAll: {
     marginLeft: "5%",

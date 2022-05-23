@@ -18,6 +18,8 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 import { getNavbar , getRoutes} from './routes';
 
+
+
 const theme = createTheme({
   typography: {
     fontFamily: ["Space Grotesk"].join(","),
@@ -62,8 +64,10 @@ function App() {
             <Router>
               <ThemeProvider theme={theme}>
                 <div className="body">
+                <div className="App">
                     {getNavbar()}
                     {getRoutes()}
+                </div>
                 </div>
                 </ThemeProvider>
             </Router>

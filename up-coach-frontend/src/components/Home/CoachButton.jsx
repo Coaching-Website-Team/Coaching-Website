@@ -19,7 +19,7 @@ function CoachButton() {
         marginLeft: "25%",
         textAlign: "center",
       }}
-      href="/SigningUp"
+      href="/signup"
       center
     >
       Find a Coach

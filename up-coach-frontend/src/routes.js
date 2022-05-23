@@ -5,8 +5,11 @@ import NavbarAuthenticated from "./components/Navbar/NavbarAuthenticated"
 import Home from "./components/Home/Home"
 import SignUp from "./components/signup/SignUp"
 import Details from "./components/Offer/ClientConsultOffer/Details"
-
+import Profil from "./components/Dashboard/Client/profil"
+import SignIn from "./components/signIn/SignIn"
 const MenteeRoutes = () => useRoutes([
+    {path: "/", element: <Home/>},
+    {path: "/profil", element: <Profil/>}
 //     {path: "/", element: <Profil/>},
 //    {path: "/profil", element: <Profil/>},
 //    {path:"/offer/:id", element: <Details/>},
@@ -14,6 +17,9 @@ const MenteeRoutes = () => useRoutes([
 
 ]);
 const MentorRoutes = () => useRoutes([
+    {path: "/", element: <Home/>},
+    {path: "/profil", element: <Profil/>},
+    {path: "/signin", element: <SignIn/>}
 
 //    {path: "/", element: <CoachProfil/>},
 //    {path: "/profil", element: <CoachProfil/>},
@@ -25,6 +31,9 @@ const MentorRoutes = () => useRoutes([
 
 ]);
 const AdminRoutes = () => useRoutes([
+    {path: "/signin", element: <SignIn/>},
+    {path: "/", element: <Home/>},
+    {path: "/profil", element: <Profil/>},
 //    {path: "/", element: <AdminProfil/>},
 //    {path: "/profil", element: <AdminProfil/>},
 //    {path: "/changePassword", element: <ChangePassword/>},
@@ -32,7 +41,9 @@ const AdminRoutes = () => useRoutes([
 //    {path: "/NewPassword/:userId", element: <NewPassword/>}
 ]);
 const GuestRoutes = () => useRoutes([
+    {path: "/signin", element: <SignIn/>},
    {path: "/", element: <Home/>},
+   {path: "/profil", element: <Profil/>},
 //    {path: "/profil", element: <Home/>},
 //    {path: "/signin", element: <SignIn/>},
    {path: "/signup", element: <SignUp/>},
@@ -52,9 +63,12 @@ const getRoutes = ()=>{
 }
 
 const getNavbar = ()=>{
-    if(isMentee()||isMentor()||isAdmin()) return <NavbarAuthenticated/>
+    console.log(isMentor());
+    if(isMentee()||isMentor()||isAdmin()) 
+    return <NavbarAuthenticated/>
 
     return <NavbarUnauthenticated/>
+  
 }
 
 
