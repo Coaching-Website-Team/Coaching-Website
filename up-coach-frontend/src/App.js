@@ -1,13 +1,25 @@
 import './css/App.css';
 
+
+import DocVerification from "./components/DocVerification/DocVerification"
+import AddOffer from "./components/Offer/AddOffer/AddOffer";
+import ConsultOffer from "./components/Offer/CoachConsultOffer/ConsultOffer";
+import Profil from "./components/Dashboard/Client/profil"
+
+import SigningIn from "./components/signIn/SigningIn"
+
 import Home from "./components/Home/Home";
+
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { BrowserRouter as Router, Route, Routes, useRoutes } from "react-router-dom";
+
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import backgroundImage from "./res/images/background_image.jpg";
 
 import { getNavbar, getRoutes } from './routes';
+
+
 
 const theme = createTheme({
   appBody: {
@@ -58,17 +70,20 @@ function App() {
         <title>coaching</title>
       </Helmet>
 
-      <Router>
-        <ThemeProvider theme={theme}>
-          <div className="body">
-            {getNavbar()}
-            {getRoutes()}
-          </div>
-        </ThemeProvider>
-      </Router>
-    </>
-  );
-}
+
+            <Router>
+              <ThemeProvider theme={theme}>
+                <div className="body">
+                <div className="App">
+                    {getNavbar()}
+                    {getRoutes()}
+                </div>
+                </div>
+                </ThemeProvider>
+            </Router>
+        </>
+    );
+  }
 
 export default App;
 /*I didn't start router...*/

@@ -1,4 +1,3 @@
-import Navbar from "../NavbarUnauthenticated/NavbarUnauthenticated";
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "@fontsource/space-grotesk"; // Defaults to weight 400.
@@ -43,7 +42,7 @@ function AdminHome() {
     return (
       <ThemeProvider theme={theme}>
         <div className="App">
-          <Navbar />
+          
     
           <div style={styles.appBody}>  <Title/>
           <AdminButton/>

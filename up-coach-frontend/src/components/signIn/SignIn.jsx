@@ -15,7 +15,9 @@ import {createTheme, ThemeProvider} from '@mui/material/styles';
 import axios from "axios";
 import {useState} from "react";
 import {goto} from "../../service/utils";
+import backgroundImage from "../../res/images/background_image.jpg";
 
+import {  Paper } from "@mui/material";
 function getRole(key) {
     return key.substring(1, key.length - 1);
 }
@@ -117,15 +119,38 @@ export default function SignIn() {
 
     return (<
         ThemeProvider theme={theme}>
-        <
-            Container component="main"
+        <Grid container component="main" sx={{ height: "100vh" }}>
+
+        <Grid
+        item
+        xt={1}
+        xs={false}
+        sm={4}
+        md={7}
+        sx={{
+          
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundRepeat: "no-repeat",
+          backgroundAttachment: "scroll",
+          backgroundColor: (t) =>
+            t.palette.mode === "light"
+              ? t.palette.grey[50]
+              : t.palette.grey[900],
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
+      <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square >
+        <Container component="main"
                       maxWidth="xs">
-            <
-                CssBaseline / >
+
+
+
+            <CssBaseline / >
                 <
                     Box sx={
                     {
-                        marginTop: 10,
+                        marginTop: 20,
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
@@ -222,8 +247,9 @@ export default function SignIn() {
                                 </div>
                                 </Box>
                                 )}
-                                <
-                /ThemeProvider>
+                                </Grid>
+                                </Grid>
+                                </ThemeProvider>
 
                                 );
                             }

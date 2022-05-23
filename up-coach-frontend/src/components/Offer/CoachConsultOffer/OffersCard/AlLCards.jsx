@@ -34,10 +34,10 @@ function AlLCards(props) {
                     return (
                         <div>
 
-                            <Grid item container spacing={12} xs={12}>
+                            <Grid item container  xs={12}>
                                 <Grid item xs={12}></Grid>
                                 <Grid item xs={2}></Grid>
-                                <Grid item xs={10}>
+                                <Grid item xs={9}>
                                     <OfferCard
                                         id={card.id}
                                         price={card.minPrice}
@@ -47,6 +47,7 @@ function AlLCards(props) {
                                         title={card.title}
                                         client={card.client}
                                     />
+                                      <Grid item xs={1}></Grid>
 
 
                                 </Grid> </Grid></div>)
@@ -54,9 +55,7 @@ function AlLCards(props) {
         </>
         }
 
-        <Grid item xs={3}>
-
-        </Grid>
+      
 
     </Grid>)
 

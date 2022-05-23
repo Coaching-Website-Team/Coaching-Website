@@ -16,13 +16,15 @@ import MenuItem from '@mui/material/MenuItem';
 import MenuIcon from '@mui/icons-material/Menu';
 import { goto } from "../../service/utils";
 import logo from '../../res/images/up_coach_logo.svg';
-import { logOut } from '../../service/authentication';
+import {logOut} from  "../../service/authentication";
+
+
 
 const pages = [
   { name: 'Home', path: "/" },
   { name: 'Offers', path: "/offers" },
   { name: 'Settings', path: "/settings" },
-  { name: 'Profile', path: "/profile" }
+  { name: 'Profile', path: "/" }
 ]
 
 const settings = ['Profile', 'Logout'];
@@ -57,9 +59,11 @@ const NavbarAuthenticated = () => {
       case "Logout":
         console.log("logging out...");
         logOut();
+
         // logOut();
         break;
       default:
+
         break;
     }
   }

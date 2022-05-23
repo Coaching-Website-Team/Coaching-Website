@@ -12,6 +12,8 @@ import Video from "./Video";
 import Video2 from "./vide2.mp4";
 import ProfilCard from "./ProfilCard"
 import { getCoachData } from "../../../service/personalData"
+import backgroundImage from "../../../res/images/background_image.jpg";
+import NewButton  from "../../../components/shared/NewButton"
 
 
 const useStyles = makeStyles({
@@ -19,6 +21,13 @@ const useStyles = makeStyles({
         flexGrow: 1,
         position: "relative",
         width: "100%",
+        height: "100vh",
+        marginTop: "3%",
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundPosition: "top",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        
 
     },
     paper: {
@@ -98,12 +107,12 @@ function Body(props) {
                             <Description />
                         </Grid>
 
-                        <Grid container xs={12}>
-                            <Grid item xs={2}></Grid>
-                            <Grid item xs={4}> <AddOffer /> </Grid>
-
-                            <Grid xs={4} item>
-                                <ConsultOffers />
+                        <Grid container xs={12} spacing={8}>
+                        <Grid xs={2} item></Grid>
+                            <Grid item xs={2}> <NewButton text="Add Offer"  href="/add_offer"/> </Grid>
+                            <Grid xs={2} item></Grid>
+                           <Grid xs={2} item>
+                            <NewButton text="Consult My offers" href="/offers" />
                             </Grid>
                         </Grid>
 

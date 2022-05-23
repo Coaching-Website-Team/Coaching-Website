@@ -10,7 +10,7 @@ function Title() {
     fontSize: "25px",
 
  fontWeight: "300",
- marginTop:"10%"
+ marginTop:"20%"
 
 }}> <span style={{color:"#F58025"}}> HELLO COACH ! </span>
  

@@ -11,6 +11,7 @@ function Description() {
                     fontWeight: "600",
                     color: "black",
                     fontStyle: "oblique",
+                   
                 }}
             >
                 Dont’ hesitate to add a new offer!

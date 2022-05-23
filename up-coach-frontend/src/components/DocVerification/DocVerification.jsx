@@ -1,4 +1,3 @@
-import Navbar from "../NavbarUnauthenticated/NavbarUnauthenticated";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "@fontsource/space-grotesk"; // Defaults to weight 400.
 import backgroundImage from "../../res/images/background_image.jpg"
@@ -39,11 +38,9 @@ function DocVerification() {
       });
     return (
       <ThemeProvider theme={theme}>
-        <div className="App">
-          <Navbar />
-    
+      
           <div style={styles.appBody}>  <ListCoach/>
-          </div>
+       
 
 
         </div>

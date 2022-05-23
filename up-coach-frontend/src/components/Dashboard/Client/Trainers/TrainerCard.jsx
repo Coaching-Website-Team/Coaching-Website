@@ -7,7 +7,7 @@ function TrainerCard(props) {
  width: 100%;
   max-width: 80%;
   
-  background:#FFFFFF;
+  background:rgba(213, 223, 230, 0.49);
   padding: 44px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   text-align: left;
@@ -29,7 +29,7 @@ display: block;
 `;
 
   const Test1 = styled.h5`
-color: #ed563b;
+color: #F58025;
 margin: 26px 0 9px 0;
 font-weight: 500;
 font-size: 14px
@@ -37,7 +37,7 @@ font-size: 14px
 `;
 
   const Test2 = styled.h3`
-color: rgba(15, 103, 8, 1);
+
 letter-spacing: 1px;
 fontFamily: "Rubik Beastly";
   }
@@ -67,7 +67,7 @@ display: -webkit-box;
       <Test3>{props.desc}</Test3>
       <Test1>{props.price}</Test1>
 
-      < TextButton value="Details" fgColor="rgba(15, 103, 8, 1)" url={props.url}> </TextButton>
+      < TextButton value="Details" fgColor="#F58025" url={props.url}> </TextButton>
 
     </Container>);
 }
