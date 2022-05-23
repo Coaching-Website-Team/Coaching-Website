@@ -12,6 +12,7 @@ import Video from "./Video";
 import Video2 from "./vide2.mp4";
 import ProfilCard from "./ProfilCard"
 import { getCoachData } from "../../../service/personalData"
+import backgroundImage from "../../../res/images/background_image.jpg";
 
 
 const useStyles = makeStyles({
@@ -19,6 +20,13 @@ const useStyles = makeStyles({
         flexGrow: 1,
         position: "relative",
         width: "100%",
+        height: "100vh",
+        marginTop: "3%",
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundPosition: "top",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        
 
     },
     paper: {

@@ -32,9 +32,7 @@ function Title(props) {
 
     <Grid container >
       <Grid item md={4} xs={4}></Grid>
-      <Grid item container md={1} xs={1} >
-        <img src={iversefeuille} alt="feuille" className={style.inversefeuille} />
-      </Grid>
+     
 
       <Grid item container md={3} xs={3} justifyContent="space-between"
       >   <p style={{
@@ -43,13 +41,12 @@ function Title(props) {
         fontSize: "40px",
         fontWeight: "1000",
         marginTop: "10%",
+        marginLeft: "20%",
         color: "#F58025"
 
       }}> {props.title} </p>
       </Grid>
-      <Grid item md={1} xs={1} >
-        <img src={feuille} alt="feuille" height="30px" className={style.feuille} /></Grid>
-      <Grid item md={3} xs={3}></Grid>
+      
 
     </Grid>
   );

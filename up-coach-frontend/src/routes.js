@@ -7,7 +7,12 @@ import SignUp from "./components/signup/SignUp"
 import SignIn from "./components/signIn/SignIn"
 import Details from "./components/Offer/ClientConsultOffer/Details"
 import CoachDashboard from "./components/Dashboard/Coach/profil"
+import  AddOffer from "./components/Offer/AddOffer/AddOffer";
+import ConsultOffer from "./components/Offer/CoachConsultOffer/ConsultOffer";
+
 const MenteeRoutes = () => useRoutes([
+    { path: "/signin", element: <SignIn /> },
+    { path: "/signup", element: <SignUp /> },
     //     {path: "/", element: <Profil/>},
     //    {path: "/profil", element: <Profil/>},
     //    {path:"/offer/:id", element: <Details/>},
@@ -15,17 +20,22 @@ const MenteeRoutes = () => useRoutes([
 
 ]);
 const MentorRoutes = () => useRoutes([
+    { path: "/signin", element: <SignIn /> },
+    { path: "/signup", element: <SignUp /> },
     { path: "/", element: <CoachDashboard /> },
+    {path:"/add_offer",element:<AddOffer/>},
+    {path:"/offers",element:<ConsultOffer/>},
     //    {path: "/", element: <CoachProfil/>},
     //    {path: "/profil", element: <CoachProfil/>},
     //    {path:"/add_offer",element:<AddOffer/>},
-    //    {path:"/offers",element:<ConsultOffer/>},
     //    {path:"/offers/clients",element:<MyClient/>},
     //    {path: "/changePassword", element: <ChangePassword/>}
 
 
 ]);
 const AdminRoutes = () => useRoutes([
+    { path: "/signin", element: <SignIn /> },
+    { path: "/signup", element: <SignUp /> },
     //    {path: "/", element: <AdminProfil/>},
     //    {path: "/profil", element: <AdminProfil/>},
     //    {path: "/changePassword", element: <ChangePassword/>},

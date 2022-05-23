@@ -6,7 +6,7 @@ function ProfilCard(props) {
   const Container = styled.div`
  width: 100%;
   width: 500px;
-  
+  background-color: #D5DFE6;
   padding: 44px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   text-align: left;
@@ -33,7 +33,7 @@ font-size: 14px
 `;
 
   const Test2 = styled.h3`
-color: rgba(15, 103, 8, 1);
+color: #F58025;
 letter-spacing: 1px;
 fontFamily: "Rubik Beastly";
   }
