@@ -29,24 +29,23 @@ pipeline{
                 }
             }
         }
-        stage("build jar"){
-	when {
-                expression{
-                   env.BRANCH_NAME == 'fixing_backend'
-                }
-            }
-            steps{
-              script{
-                  echo "branch : ${BRANCH_NAME}"
-
-                    dir('up-coach-backend') {
-                    env.JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64/"
-                  gv.buildJar()
-                    }
-              }
-            }
-
-        }
+//         stage("build jar"){
+// 	when {
+//                 expression{
+//                    env.BRANCH_NAME == 'fixing_backend'
+//                 }
+//             }
+//             steps{
+//               script{
+//                   echo "branch : ${BRANCH_NAME}"
+//
+//                     dir('up-coach-backend') {
+//                   gv.buildJar()
+//                     }
+//               }
+//             }
+//
+//         }
 //         stage("build docker-image"){
 //             steps{
 //               script{
@@ -76,13 +75,13 @@ pipeline{
 //             }
 //
 //         }
-//         stage("commiting new version"){
-//             steps{
-//                 script{
-//                     gv.commitVersion()
-//                 }
-//             }
-//         }
+        stage("commiting new version"){
+            steps{
+                script{
+                    gv.commitVersion()
+                }
+            }
+        }
 
     }
 }

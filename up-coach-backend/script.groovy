@@ -1,6 +1,6 @@
 def buildJar(){
     echo "building the jar"
-    sh 'mvn clean package -X'
+    sh 'mvn clean package'
 }
 def buildImage(){
     echo "${IMAGE_NAME}"
@@ -14,7 +14,7 @@ def pushImage(){
     }
 }
 def commitVersion(){
-    withCredentials([usernamePassword(credentialsId: 'gitlab', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]){
+    withCredentials([usernamePassword(credentialsId: 'githubCred', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]){
         sh "git config user.name 'jenkins'"
         sh "git config user.email 'jenkins@oubaydos.com'"
         sh "git remote set-url origin https://${USERNAME}:${PASSWORD}@github.com/Coaching-Website-Team/Coaching-Website"
