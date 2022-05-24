@@ -20,6 +20,7 @@ public class OfferControllerAdviceImpl implements OfferControllerAdvice {
             CoachIsNotVerifiedException exception
     ) {
         return handleOfferException(HttpStatus.BAD_REQUEST.value(), exception);
+
     }
     @ExceptionHandler(OfferNotFoundException.class)
     public ResponseEntity<OfferError> handleException(
