@@ -20,7 +20,7 @@ def commitVersion(){
         sh "git remote set-url origin https://${PASSWORD}@github.com/Coaching-Website-Team/Coaching-Website"
         sh "git add . "
         sh "git commit -m 'update version'"
-        sh "git push origin HEAD:master"
+        sh "git push origin HEAD:fixing_backend"
     }
 }
 return this
