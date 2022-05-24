@@ -1,6 +1,7 @@
 package com.upcoach.upcoachbackend.service;
 
 import com.upcoach.upcoachbackend.dto.dataDto.OfferRequestDTO;
+import com.upcoach.upcoachbackend.exception.OfferNotFoundException;
 import com.upcoach.upcoachbackend.model.Coach;
 import com.upcoach.upcoachbackend.model.Offer;
 import com.upcoach.upcoachbackend.repository.OfferRepository;
@@ -21,7 +22,9 @@ import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
+import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.verify;
 
 @ExtendWith(MockitoExtension.class)
@@ -100,10 +103,39 @@ class OfferServiceTest {
 
     @Test
     void deleteOffer() {
+        //given
+        long id = 10L;
+        given(offerRepository.existsById(id)).willReturn(true);
+        //when
+        underTest.deleteOffer(id);
+        //then
+        verify(offerRepository).existsById(id);
+        verify(offerRepository).deleteById(id);
+
+    }
+    @Test
+    void deleteOfferShouldThrowOfferNotFoundException() {
+        //given
+        long id = 10L;
+        given(offerRepository.existsById(id)).willReturn(false);
+        //when
+
+        //then
+        assertThatThrownBy(()->underTest.deleteOffer(id))
+                .isInstanceOf(OfferNotFoundException.class);
+
     }
 
     @Test
-    void getOfferDtoById() {
+    void getOfferDtoByIdShouldThrowOfferNotFoundException() {
+        //given
+        long id=100L;
+        //when
+
+        //then
+        assertThatThrownBy(()->underTest.getOfferById(id))
+                .isInstanceOf(OfferNotFoundException.class);
+
     }
 
     @Test
@@ -112,9 +144,22 @@ class OfferServiceTest {
 
     @Test
     void setOfferImage() {
+        //given
+        Offer offer = new Offer();
+        String documentName = "documentName";
+        //when
+        underTest.setOfferImage(offer,documentName);
+        //then
+        verify(offerRepository).save(offer);
     }
 
     @Test
     void getAllOffers() {
+        //given
+        //when
+        underTest.getAllOffers();
+        //then
+        verify(offerRepository).findAll();
+
     }
 }
