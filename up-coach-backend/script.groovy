@@ -17,7 +17,7 @@ def commitVersion(){
     withCredentials([usernamePassword(credentialsId: 'githubCred', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]){
         sh "git config user.name 'jenkins'"
         sh "git config user.email 'jenkins@oubaydos.com'"
-        sh "git remote set-url origin https://${USERNAME}:${PASSWORD}@github.com/Coaching-Website-Team/Coaching-Website"
+        sh "git remote set-url origin https://${PASSWORD}@github.com/Coaching-Website-Team/Coaching-Website"
         sh "git add . "
         sh "git commit -m 'update version'"
         sh "git push origin HEAD:master"
