@@ -31,7 +31,7 @@ pipeline{
         stage("build jar"){
 	when {
                 expression{
-                   env.BRANCH_NAME == 'main'
+                   env.BRANCH_NAME == 'fixing_backend'
                 }
             }
             steps{
