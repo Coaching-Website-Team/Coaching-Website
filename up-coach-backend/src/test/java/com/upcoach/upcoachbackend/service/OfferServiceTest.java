@@ -46,26 +46,26 @@ class OfferServiceTest {
         underTest = new OfferService(offerRepository,coachService,fileService,entityManager);
     }
 
-    @Test
-    @Disabled
-    void addOffer() throws IOException, NoSuchAlgorithmException {
-        //Given
-        OfferRequestDTO offerDTO = new OfferRequestDTO(
-                "offer",
-                "title",
-                "description",
-                15,
-                100,
-                null
-        );
-        //When
-        underTest.addOffer(offerDTO);
-        //Then
-        ArgumentCaptor<Offer> offerArgumentCaptor = ArgumentCaptor.forClass(Offer.class);
-        verify(offerRepository).save(offerArgumentCaptor.capture());
-        Offer capturedOffer = offerArgumentCaptor.getValue();
-
-    }
+//    @Test
+//    @Disabled
+//    void addOffer() throws IOException, NoSuchAlgorithmException {
+//        //Given
+//        OfferRequestDTO offerDTO = new OfferRequestDTO(
+//                "offer",
+//                "title",
+//                "description",
+//                15,
+//                100,
+//                null
+//        );
+//        //When
+//        underTest.addOffer(offerDTO);
+//        //Then
+//        ArgumentCaptor<Offer> offerArgumentCaptor = ArgumentCaptor.forClass(Offer.class);
+//        verify(offerRepository).save(offerArgumentCaptor.capture());
+//        Offer capturedOffer = offerArgumentCaptor.getValue();
+//
+//    }
 
     @Test
     void getOffersByTags() {
@@ -89,17 +89,17 @@ class OfferServiceTest {
         verify(offerRepository).findAllByCoachId(coach.getId());
     }
 
-    @Test
-    @Disabled
-    void getOffersByTitle() throws InterruptedException {
-        //given
-        String title= "title";
-
-        //when
-        underTest.getOffersByTitle(title);
-        //then
-
-    }
+//    @Test
+//    @Disabled
+//    void getOffersByTitle() throws InterruptedException {
+//        //given
+//        String title= "title";
+//
+//        //when
+//        underTest.getOffersByTitle(title);
+//        //then
+//
+//    }
 
     @Test
     void deleteOffer() {
