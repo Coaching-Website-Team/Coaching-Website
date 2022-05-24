@@ -11,6 +11,7 @@ pipeline{
                 script{
                     gv = load "up-coach-backend/script.groovy"
                 }
+
             }
         }
         stage("increment version"){
@@ -39,9 +40,7 @@ pipeline{
                   echo "branch : ${BRANCH_NAME}"
 
                     dir('up-coach-backend') {
-                    env.JAVA_HOME="${tool 'jdk1.8.0_111'}"
-                    env.PATH="${env.JAVA_HOME}/bin:${env.PATH}"
-
+                    env.JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64/"
                   gv.buildJar()
                     }
               }
