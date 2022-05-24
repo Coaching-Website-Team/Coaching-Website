@@ -37,8 +37,10 @@ pipeline{
             steps{
               script{
                   echo "branch : ${BRANCH_NAME}"
-                  gv.buildJar()
 
+                    dir('up-coach-backend') {
+                  gv.buildJar()
+                    }
               }
             }
 
